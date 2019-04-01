@@ -36,6 +36,10 @@ app.set("view engine","hbs");
 
 var auxlog = undefined;
 
+// Archivos creados
+
+var listasCreadas = 0;
+
 
 // METODOS GET:
 
@@ -146,6 +150,10 @@ app.get("/salir", (req,res) =>{
 
 
 app.get("/index", (req,res) =>{
+    if (listasCreadas == 0){
+        funciones_estudiantes.crearListasJSON();
+        listasCreadas = 1;
+    }
     res.render("index");
 });
 

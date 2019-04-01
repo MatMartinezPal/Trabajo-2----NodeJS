@@ -267,6 +267,28 @@ const cerrarCurso = (id_curso) =>{
 
 } 
 
+const crearListasJSON = () =>{
+
+    listarCursos();
+    listarEstudiante();
+    listarRelacion();
+
+    let datosR = JSON.stringify(listaRelacion);
+    fs.writeFile('listaRelacion.json',datosR,(err)=>{
+        if (err) throw (err);
+    });
+
+    let datosE = JSON.stringify(listaEstudiantes);
+    fs.writeFile('listaEstudiantes.json',datosE,(err)=>{
+        if (err) throw (err);
+    });
+
+    let datosC = JSON.stringify(listaCursos);
+    fs.writeFile('listaCursos.json',datosC,(err)=>{
+        if (err) throw (err);
+    });
+}
+
 
 module.exports = {
     crearEstudiante,
@@ -283,5 +305,7 @@ module.exports = {
     actualizarEstudiante,
     listaTodosCursos,
     estudiantesInscritos,
-    cerrarCurso
+    cerrarCurso,
+    crearRelacionJSON,
+    crearListasJSON
 }
