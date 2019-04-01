@@ -2,7 +2,7 @@
 
 Instrucciones de uso. (IMPORTANTE LEER)
 
-1)Descargue el servidor y deje todos los archivos en su carpeta original.
+1)Descargue el servidor del repositorio y pongalo en la ubicacion de su gusto.
 
 2)Evite ingresar a las paginas usando la URL, enviando datos a traves de la URL o buscando alguna inconsistencia entrando asi. 
 Para evitar todos estos inconvenientes muevase por la pagina mediante los botones y todo funcionara de manera correcta. 
